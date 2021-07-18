@@ -3,7 +3,8 @@ function redirect(toBaseUrl) {
     hash = window.location.hash;
     toPath = hash.replace("#", "/");
     finalURL = toBaseUrl + toPath;
-    finalURL = finalURL.replaceAll("//", "/");
-    window.location.replace(finalURL);
+    // finalURL = finalURL.replaceAll("//", "/");
+    // window.location.replace(finalURL);
+    window.location.href = finalURL;
     // console.log(finalURL);
 }
