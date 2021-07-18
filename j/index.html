@@ -1,2 +1,28 @@
+<html>
+<head>
 <script src="/redirect.js"></script>
-<script> window.onload = () => { redirect("https://nptel-hq.atlassian.net/browse"); } </script>
+</head>
+<body>
+
+
+<h3>Jira ticket finder for NPTEL Seek</h3>
+
+<label>Enter Ticket ID</label>
+<input type="text" id="ticket-id" />
+<button onclick="clickRedirect();">Go</button>
+
+<script>
+    url = "https://nptel-hq.atlassian.net/browse";
+    function clickRedirect() {
+        redirect(url, "#" + document.getElementById("ticket-id").value);
+    }
+    window.onload = () => {
+        if (window.location.hash.length > 0) {
+            redirect(url);
+        }
+    }
+</script>
+
+
+</body>
+</html>
